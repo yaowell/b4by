@@ -1,0 +1,32 @@
+Package: com.dvntm.silentnotifs
+Version: 0.0.4
+Architecture: iphoneos-arm64e
+Maintainer: dvntm
+Installed-Size: 168
+Depends: firmware (>= 14.0)
+Filename: ./debs/com.dvntm.silentnotifs_0.0.4_iphoneos-arm64e.deb
+Size: 3480
+MD5sum: 3dae13ae0449e20e1e6273208571362d
+SHA1: 31e17ace9091896fb930e71625c86df7796058dc
+SHA256: 3572f7fa5eee139735a4efec4bfb336a6708f013d5420e3914f5045691ea714d
+Section: Tweaks
+Description: Keep notifications silent while media or other app audio is playing
+Author: dvntm
+Name: SilentNotifs
+
+Package: com.dvntm.silentnotifs
+Version: 0.0.4
+Architecture: iphoneos-arm64
+Maintainer: dvntm
+Installed-Size: 168
+Depends: firmware (>= 14.0)
+Filename: ./debs/com.dvntm.silentnotifs_0.0.4_iphoneos-arm64.deb
+Size: 3550
+MD5sum: 6b11887d58779c99e14d227b7b2b00df
+SHA1: 09e58f9084dc24dc74e13215a5cf0c54a9497127
+SHA256: 91b4d02d41c36139af2e9bf320eb290f409c73371e792557bce957f0ea014984
+Section: Tweaks
+Description: Keep notifications silent while media or other app audio is playing
+Author: dvntm
+Name: SilentNotifs
+
