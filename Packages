@@ -210,19 +210,3 @@ Description: 轻量的 iOS 主屏幕 App 保护插件。通过原生长按菜单
 Author: yaowell
 Name: KeepIt
 
-Package: com.yaowell.keepit
-Version: 1.0
-Architecture: iphoneos-arm64
-Maintainer: yaowell
-Installed-Size: 172
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0)
-Filename: ./debs/com.yaowell.keepit_1.0_iphoneos-arm64.deb
-Size: 7814
-MD5sum: 3b3bc86f2a3103fd40258929ce353f48
-SHA1: 37d2e066d718b452608ff01dfe1cd0dd29ce825f
-SHA256: 558459b2c63a546d047b4528bc4e91e9351351928f3180433252a020ede59fa2
-Section: Tweaks
-Description: 轻量的 iOS 主屏幕 App 保护插件。通过原生长按菜单快速切换“禁止卸载”，启用后在主屏幕编辑模式下隐藏指定 App 的删除 ❎，防止误触卸载。 A lightweight iOS Home Screen app protection tweak. Toggle “Prevent Uninstall” directly from the native long-press menu. When enabled, the selected app’s delete button ❎ is hidden in Home Screen edit mode to help prevent accidental uninstallation.
-Author: yaowell
-Name: KeepIt
-
