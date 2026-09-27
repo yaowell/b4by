@@ -194,19 +194,3 @@ Description: 隐藏控制中心顶部的麦克风模式与视频效果模块 / H
 Author: yaowell
 Name: HideAVControls
 
-Package: com.yaowell.keepit
-Version: 1.0
-Architecture: iphoneos-arm64e
-Maintainer: yaowell
-Installed-Size: 172
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0)
-Filename: ./debs/com.yaowell.keepit_1.0_iphoneos-arm64e.deb
-Size: 7796
-MD5sum: 88edd7ceb60df924f72e4fa860c419ff
-SHA1: 02e3ac5f31f2fa369c0335fa713f5c900522db62
-SHA256: 8c52d1fad62b26482bf6bfbc82fc6a8de72aba3144c4722a92bae129e343ccc9
-Section: Tweaks
-Description: 轻量的 iOS 主屏幕 App 保护插件。通过原生长按菜单快速切换“禁止卸载”，启用后在主屏幕编辑模式下隐藏指定 App 的删除 ❎，防止误触卸载。 A lightweight iOS Home Screen app protection tweak. Toggle “Prevent Uninstall” directly from the native long-press menu. When enabled, the selected app’s delete button ❎ is hidden in Home Screen edit mode to help prevent accidental uninstallation.
-Author: yaowell
-Name: KeepIt
-
