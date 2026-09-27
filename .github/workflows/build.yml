@@ -1,31 +1,31 @@
-name: Build Repo
+name: Build and Deploy Repo Packages
 
 on:
   push:
     branches:
       - main
+      - master
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-repo:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Install Dependencies
+      - name: Generate Packages
         run: |
-          sudo apt-get update
-          sudo apt-get install -y dpkg bzip2 xz-utils zstd
+          echo "Generating Packages files..."
 
-      - name: Generate Packages File
-        run: |
-          mkdir -p debs
-          dpkg-scanpackages -m ./debs > Packages
-          bzip2 -5fkv Packages > Packages.bz2
-          xz -5fkv Packages > Packages.xz
-          zstd -q -c19 Packages > Packages.zst
-
-      - name: Commit and Push changes
+      - name: Commit & Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
