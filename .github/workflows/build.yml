@@ -1,0 +1,34 @@
+name: Build Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg bzip2 xz-utils zstd
+
+      - name: Generate Packages File
+        run: |
+          mkdir -p debs
+          dpkg-scanpackages -m ./debs > Packages
+          bzip2 -5fkv Packages > Packages.bz2
+          xz -5fkv Packages > Packages.xz
+          zstd -q -c19 Packages > Packages.zst
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Packages Packages.bz2 Packages.xz Packages.zst
+          git commit -m "Auto-generated Packages" || echo "No changes to commit"
+          git push
