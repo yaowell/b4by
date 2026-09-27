@@ -1,3 +1,67 @@
+Package: com.82flex.singlevpn
+Version: 2.1-3
+Architecture: iphoneos-arm64
+Maintainer: 82Flex <82flex@gmail.com>
+Installed-Size: 420
+Depends: firmware (>= 14.0), mobilesubstrate
+Filename: ./debs/com.82flex.singlevpn_2.1-3_iphoneos-arm64.deb
+Size: 35610
+MD5sum: bbdeac2bef7a996c76d650df6b4c652a
+SHA1: f694d482b5e0f2a82780238d23771faa8c437ca2
+SHA256: 8e526dd00c0397818deb61f51df87c7ab50c35790060f24ecff4542fb1ad7e81
+Section: Tweaks
+Description: Combine VPN state and wireless state into one icon.
+Author: 82Flex <82flex@gmail.com>
+Name: Single VPN
+
+Package: com.82flex.singlevpn
+Version: 2.1-3
+Architecture: iphoneos-arm64e
+Maintainer: 82Flex <82flex@gmail.com>
+Installed-Size: 420
+Depends: firmware (>= 14.0), mobilesubstrate
+Filename: ./debs/com.82flex.singlevpn_2.1-3_iphoneos-arm64e.deb
+Size: 35576
+MD5sum: 8e51ca39c9ed7f775a284e8ac8592355
+SHA1: d559cf050d018b3b8573c178b8a99053546cef23
+SHA256: c26513ebd501c0b1b8c9210b4a9885f2e93f31966a296746e6e702d9a072e353
+Section: Tweaks
+Description: Combine VPN state and wireless state into one icon.
+Author: 82Flex <82flex@gmail.com>
+Name: Single VPN
+
+Package: com.brunonfl.wicellswitcher
+Version: 2.0
+Architecture: iphoneos-arm64e
+Maintainer: Bruno Andrade <brubiluco@globo.com>
+Installed-Size: 352
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
+Filename: ./debs/com.brunonfl.wicellswitcher_2.0_iphoneos-arm64e.deb
+Size: 7906
+MD5sum: 18a98a7943ab15a2e4ca5a4ec88f8ab2
+SHA1: 5e90654611ab44bca20eb34371a4760a92b4ee81
+SHA256: 094bef134823ed74c3753b0ff6634bd831dfc13c13e20c960a93d8e3470439e2
+Section: Tweaks
+Description: Switch between Wi-Fi and Cellular the Smart Way!
+Author: Bruno Andrade <brubiluco@globo.com>
+Name: WiCellSwitcher
+
+Package: com.brunonfl.wicellswitcher
+Version: 2.0
+Architecture: iphoneos-arm64
+Maintainer: Bruno Andrade <brubiluco@globo.com>
+Installed-Size: 352
+Depends: mobilesubstrate, ws.hbang.common (>= 1.11)
+Filename: ./debs/com.brunonfl.wicellswitcher_2.0_iphoneos-arm64.deb
+Size: 7976
+MD5sum: 16c758de9359605bab3b909b5cb0fae2
+SHA1: b3285a9f746ad86604f87b7cf8532cf32ae14b48
+SHA256: 704f2397d6a1a83cf697915a7d97974dd0b69ade37f061f5b112acd16f9c98d2
+Section: Tweaks
+Description: Switch between Wi-Fi and Cellular the Smart Way!
+Author: Bruno Andrade <brubiluco@globo.com>
+Name: WiCellSwitcher
+
 Package: com.dvntm.silentnotifs
 Version: 0.0.4
 Architecture: iphoneos-arm64e
@@ -29,4 +93,40 @@ Section: Tweaks
 Description: Keep notifications silent while media or other app audio is playing
 Author: dvntm
 Name: SilentNotifs
+
+Package: com.futur3sn0w.batterymirror
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: futur3sn0w
+Installed-Size: 172
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Filename: ./debs/com.futur3sn0w.batterymirror_1.0_iphoneos-arm64e.deb
+Size: 12554
+MD5sum: 5f2c5c066349632f8e922926ea59e303
+SHA1: b107875c2033d94b768d98404e3942d768fd1f17
+SHA256: 250d1b7520b3f1529e8f8a3bc9cf7f34cd7bb9851e06fad0f4b4e448510fecaf
+Section: Tweaks
+Description: Mirrors the statusbar battery on the Low Power Mode toggle in Control Center.
+Author: futur3sn0w
+Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.batterymirror.png
+Name: BatteryMirror
+Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.batterymirror.json
+
+Package: com.futur3sn0w.batterymirror
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: futur3sn0w
+Installed-Size: 172
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Filename: ./debs/com.futur3sn0w.batterymirror_1.0_iphoneos-arm64.deb
+Size: 12622
+MD5sum: 09a2a2bdc8be9039b3d1e7a0c5e28753
+SHA1: e4d90cf425a8bedb35252d02f9771cedd46e4a1f
+SHA256: 0fdd8c51df463301d00b96da487a46d01a5db5ce3ebd29ed7aeb157f96ee8fba
+Section: Tweaks
+Description: Mirrors the statusbar battery on the Low Power Mode toggle in Control Center.
+Author: futur3sn0w
+Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.batterymirror.png
+Name: BatteryMirror
+Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.batterymirror.json
 
