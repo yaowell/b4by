@@ -259,6 +259,24 @@ Author: iosdump
 Icon: https://huayuarc.github.io/icon/AppData.png
 Name: AppData
 
+Package: com.lenglengyu.luyinzjpro
+Version: 0.0.1
+Architecture: iphoneos-arm
+Maintainer: lenglengyu <lenglengyu@126.com>
+Installed-Size: 272
+Depends: mobilesubstrate, com.lenglengyu.libsupervipp
+Filename: ./debs/录音专家【会员破解】.0.0.1.deb
+Size: 53756
+MD5sum: aecbc60bcdfe38259e58d34cf9c8b9ee
+SHA1: 0af5c9950f7d6566844e3a757d6e6ff4164c7a6b
+SHA256: 108070da13656e188a34d39203e92274391d9b6ef498e569e22288618223ae18
+Section: 会员专区
+Description: 解锁会员权限，仅供会员使用。
+Author: lenglengyu
+Depiction: https://repo.lenglengyu.top/packageInfo/luyinzjpro.html
+Name: 录音专家【会员破解】
+Sileodepiction: https://repo.lenglengyu.top/packageInfo/luyinzjprosileo
+
 Package: com.lenglengyu.vmoonpro
 Version: 0.0.1
 Architecture: iphoneos-arm64
