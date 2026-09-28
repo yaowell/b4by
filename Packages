@@ -66,6 +66,26 @@ Description: Combine VPN state and wireless state into one icon.
 Author: 82Flex <82flex@gmail.com>
 Name: Single VPN
 
+Package: com.abcydia.batterylife
+Version: 1.8.0
+Architecture: iphoneos-arm
+Maintainer: WZteam <admin@abcydia.com>
+Installed-Size: 10225
+Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5000), preferenceloader, iokittools
+Conflicts: batterylife
+Filename: ./debs/com.abcydia.batterylife_1.8.0_iphoneos-arm.deb
+Size: 3933074
+MD5sum: 57277a8411f8a0139c08a54c5115448b
+SHA1: cbc57391e73273513d9ff18fa724e6716cd94da0
+SHA256: ca612bd39298acb754d2a40a061e377c86d9b0f6a9a9fcaf5ffc39615052e035
+Section: Utilities
+Description: 提供关于手机电池的详细信息
+Tag: purpose::uikit, role::enduser, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10
+Author: rbt <batterylife1.7.x@rbtdigital.com>
+Icon: file:///Applications/BatteryLife.app/AppIcon57x57.png
+Name: BatteryLife 电池信息
+Sponsor: ABCydia <http://www.abcydia.com>
+
 Package: com.brunonfl.wicellswitcher
 Version: 2.0
 Architecture: iphoneos-arm64e
@@ -370,4 +390,18 @@ Section: Tweaks
 Description: 轻量的 iOS 主屏幕 App 保护插件。通过原生长按菜单快速切换“禁止卸载”，启用后在主屏幕编辑模式下隐藏指定 App 的删除 ❎，防止误触卸载。 A lightweight iOS Home Screen app protection tweak. Toggle “Prevent Uninstall” directly from the native long-press menu. When enabled, the selected app’s delete button ❎ is hidden in Home Screen edit mode to help prevent accidental uninstallation.
 Author: yaowell
 Name: KeepIt
+
+Package: com.zwsn.cloudmusic
+Version: 0.0.1-29+debug
+Architecture: iphoneos-arm
+Depends: mobilesubstrate
+Filename: ./debs/com.zwsn.cloudmusic_0.0.1-29+debug_iphoneos-arm.deb
+Size: 16364
+MD5sum: 5ba222de4918daa19dbed649126e3ed1
+SHA1: bf819a5897b2841c44d4b1f69d85a7870127d30d
+SHA256: f5bbe14195ba9654b6bb0c9f91ba14a0490c98d284df265ba3a0935b55c585cd
+Section: 『知网少年-软件增强』
+Author: zyh
+Icon: file:///Applications/Cydia.app/Sections/zwrjzq.png
+Name: Neteasemusic- 网易云VIP
 
