@@ -1,3 +1,21 @@
+Package: cn.yttxcs.bidl
+Version: 1.1.1
+Architecture: iphoneos-arm
+Maintainer: 他是个疯子 <409774743@qq.com>
+Installed-Size: 19549
+Depends: mobilesubstrate, firmware (>= 5.0)
+Filename: ./debs/BiliDownloader「哔哩哔哩视频导出」.1.1.1.deb
+Size: 6434316
+MD5sum: 357dee4d99c3de989e1a9e50d621b1dd
+SHA1: c3ed1e300de449b78ef807c27169472b5117caa8
+SHA256: bb6835a399a87d45d8b8540f6d80eaa8aee0452d4bff35b7f201bfc32c1b35b9
+Section: 插件
+Description: 在bilibili应用程序上下载并导出任何视频。
+Author: LNSSPsd  <409774743@qq.com>
+Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
+Name: BiliDownloader「哔哩哔哩视频导出」
+Sponsor: 幺筒源<409774743@qq.com>
+
 Package: com.82flex.singlevpn
 Version: 2.1-3
 Architecture: iphoneos-arm64
@@ -61,6 +79,25 @@ Section: Tweaks
 Description: Switch between Wi-Fi and Cellular the Smart Way!
 Author: Bruno Andrade <brubiluco@globo.com>
 Name: WiCellSwitcher
+
+Package: com.cydiabc.ctpjcrack
+Version: 0.1.1
+Architecture: iphoneos-arm
+Maintainer: Ai-小苹果
+Depends: mobilesubstrate
+Filename: ./debs/长图拼接增强插件.0.1.1.deb
+Size: 6900
+MD5sum: 04aadb4c82452f4ef6e1816bbdec8377
+SHA1: 37cc5f76bd987e73fe2840e8ff1771a82318203c
+SHA256: 9fefbff188ddb7b110163a6c519b382faa9b93448f08751b7101cca9874c7401
+Section: 插件
+Description: 长图拼接开启高级版权限
+A12: 1
+Author: Netskao
+Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
+Icon2: 1.png
+Name: 长图拼接增强插件
+Sponsor: Ai-小苹果
 
 Package: com.dvntm.silentnotifs
 Version: 0.0.4
@@ -164,6 +201,24 @@ Description: 在主屏幕查看应用数据与管理应用
 Author: iosdump
 Icon: https://huayuarc.github.io/icon/AppData.png
 Name: AppData
+
+Package: com.lenglengyu.vmoonpro
+Version: 0.0.1
+Architecture: iphoneos-arm
+Maintainer: lenglengyu <lenglengyu@126.com>
+Installed-Size: 660
+Depends: mobilesubstrate
+Filename: ./debs/VmoonPro.0.0.1.deb
+Size: 107044
+MD5sum: 650c839f5ca360a8606b11425a08c68c
+SHA1: 0707e7bc5947617593636aa15502bd9470aeeec1
+SHA256: c5b3939d64cc277a8c13ec1f2d5043d64ed2c8fbefa9992b1286997255c786af
+Section: Tweaks
+Description: 解锁会员权限。
+Author: lenglengyu
+Depiction: https://repo.lenglengyu.top/packageInfo/vmoonpro.html
+Name: Vmoon Pro
+Sileodepiction: https://repo.lenglengyu.top/packageInfo/vmoonprosileo
 
 Package: com.yaowell.cowbellx
 Version: 1.0.0
