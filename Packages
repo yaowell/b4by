@@ -345,6 +345,38 @@ Description: 低电量模块电池显示百分比图标 填充条随电量实时
 Author: yaowell
 Name: CowbellX
 
+Package: com.yaowell.dndhaptics
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 276
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), com.opa334.ccsupport
+Filename: ./debs/com.yaowell.dndhaptics_1.0_iphoneos-arm64e.deb
+Size: 7148
+MD5sum: 88102e89e6c8a01fdfd58abbab2ea7e2
+SHA1: 49479539e0faf8970b9e4cb3ab35bac982955959
+SHA256: 2544da8dbba88320ba87a80909885dc7912565439593c043b372772471e27fee
+Section: Tweaks
+Description: 将勿扰模式、来电震动和静音震动合并为一个 控制中心模块开关，一键在“打开勿扰模式 + 无震动”和“关闭勿扰模式+恢复震动”之间切换Combines Do Not Disturb, ring vibration, and silent-mode vibration into a single Control Center toggle, allowing one-tap switching between “DND + no vibration” and “normal mode + restored vibration.”
+Author: yaowell
+Name: DND Haptics
+
+Package: com.yaowell.dndhaptics
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 276
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), com.opa334.ccsupport
+Filename: ./debs/com.yaowell.dndhaptics_1.0_iphoneos-arm64.deb
+Size: 7220
+MD5sum: a89614d6ce06da640fba816aa899cb34
+SHA1: 16ff484201bd2f0296a3b7b6de1c8e21db2433e7
+SHA256: 88d734f0b8755a0506795ef6a3e5f6bda9f52d74c437462a3b6fca16f9cb866b
+Section: Tweaks
+Description: 将勿扰模式、来电震动和静音震动合并为一个 控制中心模块开关，一键在“打开勿扰模式 + 无震动”和“关闭勿扰模式+恢复震动”之间切换Combines Do Not Disturb, ring vibration, and silent-mode vibration into a single Control Center toggle, allowing one-tap switching between “DND + no vibration” and “normal mode + restored vibration.”
+Author: yaowell
+Name: DND Haptics
+
 Package: com.yaowell.hideavcontrols
 Version: 1.1
 Architecture: iphoneos-arm64
