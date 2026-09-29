@@ -54,7 +54,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h1 {
@@ -73,9 +79,8 @@
 
         .btn-group {
             display: flex;
-            flex-direction: flex-column;
-            gap: 12px;
             flex-direction: column;
+            gap: 12px;
         }
 
         .btn {
@@ -100,7 +105,7 @@
             opacity: 0.9;
         }
 
-        /* 专属渐变配色 */
+        /* 专属配色 */
         .btn-sileo {
             background: linear-gradient(135deg, #007aff, #0051a8);
         }
@@ -144,7 +149,10 @@
 <body>
 
     <div class="container">
-        <div class="avatar">📦</div>
+        <!-- 这里自动加载同目录下的 CydiaIcon.png -->
+        <div class="avatar">
+            <img src="./CydiaIcon.png" alt="源图标">
+        </div>
         
         <h1>添加软件源</h1>
         <p class="subtitle" id="repo-url">https://yaowell.github.io/b4by/</p>
@@ -180,7 +188,6 @@
                     toast.classList.remove('show');
                 }, 2000);
             }).catch(err => {
-                // 兼容低版本或非 HTTPS 运行环境
                 const input = document.createElement('input');
                 input.value = url;
                 document.body.appendChild(input);
