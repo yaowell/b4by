@@ -188,24 +188,6 @@ Description: Keep notifications silent while media or other app audio is playing
 Author: dvntm
 Name: SilentNotifs
 
-Package: com.futur3sn0w.batterymirror
-Version: 1.0
-Architecture: iphoneos-arm64e
-Maintainer: futur3sn0w
-Installed-Size: 172
-Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
-Filename: ./debs/com.futur3sn0w.batterymirror_1.0_iphoneos-arm64e.deb
-Size: 12554
-MD5sum: 5f2c5c066349632f8e922926ea59e303
-SHA1: b107875c2033d94b768d98404e3942d768fd1f17
-SHA256: 250d1b7520b3f1529e8f8a3bc9cf7f34cd7bb9851e06fad0f4b4e448510fecaf
-Section: Tweaks
-Description: Mirrors the statusbar battery on the Low Power Mode toggle in Control Center.
-Author: futur3sn0w
-Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.batterymirror.png
-Name: BatteryMirror
-Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.batterymirror.json
-
 Package: com.iosdump.appdata
 Version: 2.7.5
 Architecture: iphoneos-arm64
