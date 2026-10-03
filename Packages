@@ -309,6 +309,38 @@ Description: 震动关闭时 闹钟仍保持正常震动Keeps the native Clock a
 Author: yaowell
 Name: AlarmVibrate
 
+Package: com.yaowell.batterymirrorlite
+Version: 1.1
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 172
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.yaowell.batterymirrorlite_1.1_iphoneos-arm64e.deb
+Size: 12756
+MD5sum: 720bf18be392997c3127867c4ca69cfc
+SHA1: ee96a09286249d9c6378e715d36576c94ad38ca6
+SHA256: b3005009956904f76089800130302d6a56ec6b5429c8baeb40ab0b78fd334374
+Section: Tweaks
+Description: 将控制中心低电量模块图标替换为状态栏电池胶囊图标（适合非全面屏或隐藏了控制中心状态栏、且未开启顶部电量百分比时，方便查看实时电量）。基于 futur3sn0w 开源项目修改，去除设置项 Replaces Low Power Mode toggle icon with statusbar battery pill icon for easier battery viewing in Control Center.
+Author: yaowell futur3sn0w
+Name: BatteryMirror Lite
+
+Package: com.yaowell.batterymirrorlite
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 172
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.yaowell.batterymirrorlite_1.1_iphoneos-arm64.deb
+Size: 12846
+MD5sum: 625e65b2e7777c844fd767a689c565ca
+SHA1: cd82790d9111a7b97c28b73dbf7b0b9d616dea1e
+SHA256: bc322e5b29eed238e6409cd2b37491be10a880c805ac5413fff4d31faef9d6da
+Section: Tweaks
+Description: 将控制中心低电量模块图标替换为状态栏电池胶囊图标（适合非全面屏或隐藏了控制中心状态栏、且未开启顶部电量百分比时，方便查看实时电量）。基于 futur3sn0w 开源项目修改，去除设置项 Replaces Low Power Mode toggle icon with statusbar battery pill icon for easier battery viewing in Control Center.
+Author: yaowell futur3sn0w
+Name: BatteryMirror Lite
+
 Package: com.yaowell.cowbellx
 Version: 1.0.0
 Architecture: iphoneos-arm64e
