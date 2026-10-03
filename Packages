@@ -206,24 +206,6 @@ Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.batterymirror.png
 Name: BatteryMirror
 Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.batterymirror.json
 
-Package: com.futur3sn0w.batterymirror
-Version: 1.0
-Architecture: iphoneos-arm64
-Maintainer: futur3sn0w
-Installed-Size: 172
-Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
-Filename: ./debs/com.futur3sn0w.batterymirror_1.0_iphoneos-arm64.deb
-Size: 12622
-MD5sum: 09a2a2bdc8be9039b3d1e7a0c5e28753
-SHA1: e4d90cf425a8bedb35252d02f9771cedd46e4a1f
-SHA256: 0fdd8c51df463301d00b96da487a46d01a5db5ce3ebd29ed7aeb157f96ee8fba
-Section: Tweaks
-Description: Mirrors the statusbar battery on the Low Power Mode toggle in Control Center.
-Author: futur3sn0w
-Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.batterymirror.png
-Name: BatteryMirror
-Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.batterymirror.json
-
 Package: com.iosdump.appdata
 Version: 2.7.5
 Architecture: iphoneos-arm64
