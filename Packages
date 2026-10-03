@@ -313,6 +313,38 @@ Depiction: https://repo.lenglengyu.top/packageInfo/vmoonpro.html
 Name: Vmoon Pro
 Sileodepiction: https://repo.lenglengyu.top/packageInfo/vmoonprosileo
 
+Package: com.yaowell.alarmvibrate
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.yaowell.alarmvibrate_1.0_iphoneos-arm64e.deb
+Size: 3172
+MD5sum: 634639d41530bd8b498f643ffa322523
+SHA1: 119b102ef6924ff12e3c1b3bbbc0772a58613582
+SHA256: 5be3a9c76e27f070f375f621b5d694f5a61418abcf728e94a8a3602860ef7055
+Section: Tweaks
+Description: 震动关闭时 闹钟仍保持正常震动Keeps the native Clock alarm vibration working when system vibration is disabled.
+Author: yaowell
+Name: AlarmVibrate
+
+Package: com.yaowell.alarmvibrate
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.yaowell.alarmvibrate_1.0_iphoneos-arm64.deb
+Size: 3230
+MD5sum: 0b485228bf91d5592b6729b3ff5682af
+SHA1: 66a8b6dd45af47048cfef27c027987e54f574c7a
+SHA256: eae593da77f71aa7adae50b378568694baa1188f39f90f62ae803b8579547407
+Section: Tweaks
+Description: 震动关闭时 闹钟仍保持正常震动Keeps the native Clock alarm vibration working when system vibration is disabled.
+Author: yaowell
+Name: AlarmVibrate
+
 Package: com.yaowell.cowbellx
 Version: 1.0.0
 Architecture: iphoneos-arm64e
