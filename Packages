@@ -12,7 +12,9 @@ SHA256: bb6835a399a87d45d8b8540f6d80eaa8aee0452d4bff35b7f201bfc32c1b35b9
 Section: 插件
 Description: 在bilibili应用程序上下载并导出任何视频。
 Author: LNSSPsd  <409774743@qq.com>
+Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
 Name: BiliDownloader「哔哩哔哩视频导出」
+Sponsor: 幺筒源<409774743@qq.com>
 
 Package: cn.yttxcs.bidl
 Version: 1.1.1
@@ -30,6 +32,7 @@ Description: 在bilibili应用程序上下载并导出任何视频。
 Author: LNSSPsd  <409774743@qq.com>
 Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
 Name: BiliDownloader「哔哩哔哩视频导出」
+Sponsor: 幺筒源<409774743@qq.com>
 
 Package: com.82flex.singlevpn
 Version: 2.1-3
