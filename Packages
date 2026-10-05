@@ -341,6 +341,38 @@ Description: 将控制中心低电量模块图标替换为状态栏电池胶囊�
 Author: yaowell futur3sn0w
 Name: BatteryMirror Lite
 
+Package: com.yaowell.cellbell
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate
+Filename: ./debs/com.yaowell.cellbell_1.0_iphoneos-arm64e.deb
+Size: 6036
+MD5sum: de21ef5aaae853be4a593d5ae97da2a7
+SHA1: d2e58e920bb875865b7f546cd5ba8c6b0f1ca5e5
+SHA256: 5aa11d4e0bb88f6fa29418b70f3ba2845ed08915b1672c2d962009a1ac6839f9
+Section: Tweaks
+Description: 关闭电池百分比时启用 iOS 27 风格电池图标。(Enables an iOS 27-style battery icon when battery percentage is off.)
+Author: yaowell
+Name: CellBell
+
+Package: com.yaowell.cellbell
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate
+Filename: ./debs/com.yaowell.cellbell_1.0_iphoneos-arm64.deb
+Size: 6098
+MD5sum: 80849febd557834f913578a6f78aa754
+SHA1: a863b4b618542ea23a6f2a184bf6ea803743f350
+SHA256: b3def80ad604995f2a05960e10e95c4e0d539f2ab2b08915855d8b9ca3968479
+Section: Tweaks
+Description: 关闭电池百分比时启用 iOS 27 风格电池图标。(Enables an iOS 27-style battery icon when battery percentage is off.)
+Author: yaowell
+Name: CellBell
+
 Package: com.yaowell.cowbellx
 Version: 1.0.0
 Architecture: iphoneos-arm64e
