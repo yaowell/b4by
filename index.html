@@ -49,7 +49,7 @@
             height: 68px;
             border-radius: 18px;
             margin: 0 auto 16px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
             background: #fff;
             display: flex;
             align-items: center;
@@ -105,7 +105,6 @@
             opacity: 0.9;
         }
 
-        /* 专属配色 */
         .btn-sileo {
             background: linear-gradient(135deg, #007aff, #0051a8);
         }
@@ -122,6 +121,17 @@
             background: rgba(255, 255, 255, 0.85);
             color: var(--text-color);
             border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .contact {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--subtext-color);
+        }
+
+        .contact strong {
+            color: var(--text-color);
+            font-weight: 600;
         }
 
         .toast {
@@ -149,7 +159,6 @@
 <body>
 
     <div class="container">
-        <!-- 这里自动加载同目录下的 CydiaIcon.png -->
         <div class="avatar">
             <img src="./CydiaIcon.png" alt="源图标">
         </div>
@@ -174,6 +183,8 @@
                 📋 复制源地址
             </button>
         </div>
+
+        <p class="contact">如有任何问题或功能性建议，欢迎联系开发者 微信：<strong>EDM1029</strong></p>
     </div>
 
     <div class="toast" id="toast">源地址已复制到剪贴板</div>
