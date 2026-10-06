@@ -126,12 +126,15 @@
         .contact {
             margin-top: 20px;
             font-size: 13px;
+            line-height: 1.6;
             color: var(--subtext-color);
         }
 
         .contact strong {
+            display: block;
             color: var(--text-color);
             font-weight: 600;
+            font-size: 14px;
         }
 
         .toast {
@@ -162,7 +165,7 @@
         <div class="avatar">
             <img src="./CydiaIcon.png" alt="源图标">
         </div>
-        
+
         <h1>添加软件源</h1>
         <p class="subtitle" id="repo-url">https://yaowell.github.io/b4by/</p>
 
@@ -170,11 +173,11 @@
             <a href="sileo://source/https://yaowell.github.io/b4by/" class="btn btn-sileo">
                 添加软件源到 Sileo
             </a>
-            
+
             <a href="zbra://sources/add/https://yaowell.github.io/b4by/" class="btn btn-zebra">
                 添加软件源到 Zebra
             </a>
-            
+
             <a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yaowell.github.io/b4by/" class="btn btn-cydia">
                 添加软件源到 Cydia
             </a>
@@ -184,7 +187,10 @@
             </button>
         </div>
 
-        <p class="contact">如有任何问题或功能性建议，欢迎联系开发者 微信：<strong>EDM1029</strong></p>
+        <p class="contact">
+            如有任何问题或功能性建议，欢迎联系开发者<br>
+            微信：<strong>EDM1029</strong>
+        </p>
     </div>
 
     <div class="toast" id="toast">源地址已复制到剪贴板</div>
@@ -192,12 +198,9 @@
     <script>
         function copyRepo() {
             const url = document.getElementById('repo-url').innerText;
+
             navigator.clipboard.writeText(url).then(() => {
-                const toast = document.getElementById('toast');
-                toast.classList.add('show');
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 2000);
+                showToast();
             }).catch(err => {
                 const input = document.createElement('input');
                 input.value = url;
@@ -205,14 +208,19 @@
                 input.select();
                 document.execCommand('copy');
                 document.body.removeChild(input);
-
-                const toast = document.getElementById('toast');
-                toast.classList.add('show');
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 2000);
+                showToast();
             });
         }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
     </script>
+
 </body>
 </html>
