@@ -21,31 +21,34 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      - name: Install dpkg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev
+
       - name: Generate Packages
         run: |
-          if [ -d "debs" ] || [ -d "deb" ]; then
-            dpkg-scanpackages -m ./debs /dev/null > Packages 2>/dev/null || true
-            [ -f Packages ] && bzip2 -f -k Packages || true
-            [ -f Packages ] && xz -f -k Packages || true
-            [ -f Packages ] && zstd -f -k Packages || true
-          fi
+          dpkg-scanpackages -m ./debs /dev/null > Packages
+
+          bzip2 -f -k Packages
+          xz -f -k Packages
+          zstd -f -k Packages
 
       - name: Commit & Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          files_to_add=""
-          for f in Packages Packages.bz2 Packages.xz Packages.zst; do
-            if [ -f "$f" ]; then
-              files_to_add="$files_to_add $f"
-            fi
-          done
 
-          if [ -n "$files_to_add" ]; then
-            git add $files_to_add
-            git commit -m "Auto-generated Packages" || echo "No changes to commit"
-            git push
-          else
-            echo "No Packages files generated yet (waiting for first deb)."
+          git add Packages Packages.bz2 Packages.xz Packages.zst
+
+          if git diff --cached --quiet; then
+            echo "No Packages changes."
+            exit 0
           fi
+
+          git commit -m "Auto-generated Packages"
+
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
