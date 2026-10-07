@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#d8d5f5">
-    <title>添加软件源</title>
+    <meta name="theme-color" content="#e9eaf8">
+    <title>yaowell · 个人源</title>
 
     <style>
         :root {
-            --text: #1d1d1f;
-            --subtext: #86868b;
-            --line: rgba(0, 0, 0, 0.08);
-            --card: rgba(255, 255, 255, 0.78);
+            --text: #202124;
+            --subtext: #8a8d96;
+            --card: rgba(255, 255, 255, 0.70);
+            --line: rgba(255, 255, 255, 0.65);
+            --input: rgba(250, 251, 253, 0.72);
+            --accent: #82b4c5;
         }
 
         * {
@@ -27,14 +29,26 @@
 
         body {
             min-height: 100vh;
-            margin: 0;
-            padding: 8vh 16px 30px;
+            padding: 13vh 16px 30px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             color: var(--text);
-            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eeeafb 0%,
+                    #e2e7fa 45%,
+                    #cfe3f8 100%
+                );
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "SF Pro Display",
+                "PingFang SC",
+                "Helvetica Neue",
+                Arial,
+                sans-serif;
         }
 
         a {
@@ -52,13 +66,14 @@
         }
 
         .card {
-            padding: 32px 24px 24px;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            border-radius: 26px;
+            padding: 36px 26px 24px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
             background: var(--card);
-            box-shadow: 0 20px 50px rgba(40, 60, 80, 0.12);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            box-shadow:
+                0 20px 55px rgba(75, 90, 120, 0.10);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
         }
 
         .profile {
@@ -66,64 +81,70 @@
         }
 
         .avatar {
-            width: 76px;
-            height: 76px;
-            margin: 0 auto 14px;
+            width: 78px;
+            height: 78px;
+            margin: 0 auto 16px;
             border-radius: 21px;
             object-fit: cover;
             background: #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+            box-shadow:
+                0 8px 22px rgba(80, 90, 110, 0.10);
         }
 
         h1 {
             margin: 0;
-            font-size: 25px;
+            font-size: 30px;
+            line-height: 1.1;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.8px;
         }
 
         .bio {
-            margin: 7px 0 26px;
+            margin: 9px 0 29px;
             color: var(--subtext);
-            font-size: 13px;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         .label {
             display: block;
             margin: 0 0 8px;
-            color: var(--subtext);
+            color: #858993;
             font-size: 12px;
+            font-weight: 500;
         }
 
         .repo-row {
             display: flex;
-            gap: 8px;
+            gap: 9px;
         }
 
         .repo-input {
             min-width: 0;
             flex: 1;
-            height: 44px;
-            padding: 0 12px;
-            border: 1px solid var(--line);
-            border-radius: 12px;
+            height: 46px;
+            padding: 0 13px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 13px;
             outline: none;
-            color: #5f6368;
-            background: rgba(248, 250, 252, 0.9);
-            font-size: 12px;
+            color: #60646c;
+            background: var(--input);
+            font-size: 13px;
         }
 
         .copy-button {
-            height: 44px;
-            padding: 0 16px;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
+            height: 46px;
+            padding: 0 17px;
+            border: 0;
+            border-radius: 13px;
             color: #fff;
-            background: #6d9eb2;
+            background: var(--accent);
             cursor: pointer;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
         }
 
         .copy-button:active {
@@ -134,8 +155,8 @@
         .installers {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-            margin-top: 18px;
+            gap: 7px;
+            margin-top: 20px;
         }
 
         .installer {
@@ -144,15 +165,17 @@
             align-items: center;
             justify-content: center;
             gap: 7px;
-            min-height: 82px;
-            padding: 9px 4px;
+            min-height: 88px;
+            padding: 9px 3px;
             border: 1px solid transparent;
-            border-radius: 14px;
-            color: #68737c;
-            background: rgba(255, 255, 255, 0.32);
+            border-radius: 15px;
+            color: #747a83;
+            background: rgba(255, 255, 255, 0.24);
             font-size: 11px;
             font-weight: 500;
-            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
         }
 
         .installer:active {
@@ -161,21 +184,20 @@
 
         .installer:hover,
         .installer:focus-visible {
-            border-color: var(--line);
-            background: rgba(255, 255, 255, 0.72);
+            background: rgba(255, 255, 255, 0.45);
         }
 
         .installer img {
-            width: 34px;
-            height: 34px;
+            width: 35px;
+            height: 35px;
             object-fit: contain;
             border-radius: 9px;
         }
 
         .contact {
-            margin-top: 22px;
-            padding-top: 18px;
-            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            margin-top: 23px;
+            padding-top: 19px;
+            border-top: 1px solid rgba(0, 0, 0, 0.055);
             text-align: center;
             color: var(--subtext);
             font-size: 12px;
@@ -184,12 +206,13 @@
 
         .contact-title {
             color: var(--text);
+            font-size: 13px;
             font-weight: 600;
         }
 
         .contact-number {
             color: var(--text);
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
         }
 
@@ -200,12 +223,14 @@
             padding: 9px 15px;
             border-radius: 99px;
             color: #fff;
-            background: rgba(30, 30, 30, 0.82);
+            background: rgba(35, 35, 38, 0.78);
             font-size: 12px;
             opacity: 0;
             pointer-events: none;
             transform: translate(-50%, 10px);
-            transition: opacity 0.2s ease, transform 0.2s ease;
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -217,11 +242,11 @@
 
         @media (max-width: 390px) {
             body {
-                padding-top: 5vh;
+                padding-top: 8vh;
             }
 
             .card {
-                padding: 28px 18px 22px;
+                padding: 31px 18px 22px;
             }
 
             .repo-row {
@@ -243,14 +268,23 @@
         <section class="card">
 
             <div class="profile">
-                <img class="avatar" src="./CydiaIcon.png" alt="源图标">
-                <h1>添加软件源</h1>
-                <p class="bio">不允许 你被别人发现 :D</p>
+                <img
+                    class="avatar"
+                    src="./CydiaIcon.png"
+                    alt="yaowell"
+                >
+
+                <h1>yaowell</h1>
+
+                <p class="bio">不停的浪费 :D</p>
             </div>
 
-            <label class="label" for="repo-url">源地址</label>
+            <label class="label" for="repo-url">
+                源地址
+            </label>
 
             <div class="repo-row">
+
                 <input
                     class="repo-input"
                     id="repo-url"
@@ -266,15 +300,22 @@
                 >
                     复制
                 </button>
+
             </div>
 
-            <div class="installers" aria-label="添加到包管理器">
+            <div
+                class="installers"
+                aria-label="添加到包管理器"
+            >
 
                 <a
                     class="installer"
                     href="sileo://source/https://yaowell.github.io/b4by/"
                 >
-                    <img src="icon/sileo.png" alt="Sileo">
+                    <img
+                        src="icon/sileo.png"
+                        alt="Sileo"
+                    >
                     <span>Sileo</span>
                 </a>
 
@@ -282,7 +323,10 @@
                     class="installer"
                     href="irisin://repository/add?url=https%3A%2F%2Fyaowell.github.io%2Fb4by%2F"
                 >
-                    <img src="icon/irisin.png" alt="Irisin">
+                    <img
+                        src="icon/irisin.png"
+                        alt="Irisin"
+                    >
                     <span>Irisin</span>
                 </a>
 
@@ -290,7 +334,10 @@
                     class="installer"
                     href="zbra://sources/add/https://yaowell.github.io/b4by/"
                 >
-                    <img src="icon/zebra.png" alt="Zebra">
+                    <img
+                        src="icon/zebra.png"
+                        alt="Zebra"
+                    >
                     <span>Zebra</span>
                 </a>
 
@@ -298,23 +345,35 @@
                     class="installer"
                     href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yaowell.github.io/b4by/"
                 >
-                    <img src="icon/cydia.png" alt="Cydia">
+                    <img
+                        src="icon/cydia.png"
+                        alt="Cydia"
+                    >
                     <span>Cydia</span>
                 </a>
 
             </div>
 
             <div class="contact">
-                <span class="contact-title">个人源 · 有问题联系</span><br>
-                QQ / WeChat<br>
-                <span class="contact-number">280442219</span>
+                <span class="contact-title">
+                    个人源 · 有问题联系
+                </span>
+                <br>
+                QQ / WeChat
+                <br>
+                <span class="contact-number">
+                    280442219
+                </span>
             </div>
 
         </section>
 
     </main>
 
-    <div class="toast" id="toast">
+    <div
+        class="toast"
+        id="toast"
+    >
         源地址已复制
     </div>
 
