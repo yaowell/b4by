@@ -309,22 +309,6 @@ Description: 震动关闭时 闹钟仍保持正常震动Keeps the native Clock a
 Author: yaowell
 Name: AlarmVibrate
 
-Package: com.yaowell.audiorecordercontrol
-Version: 0.2
-Architecture: iphoneos-arm64
-Maintainer: yaowell
-Installed-Size: 300
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
-Filename: ./debs/com.yaowell.audiorecordercontrol_0.2_iphoneos-arm64.deb
-Size: 5354
-MD5sum: b2c73a2f70fcc019571c66fe65fe3061
-SHA1: 4e3a7431233a3e1ae9ca9fd69fa53036855170ed
-SHA256: aee9c22f9bc9bc3df1b2558414fc45b3ff6cc0766f0af52f2bceb8c335374edf
-Section: Tweaks
-Description: 控制 AudioRecorder XS 录音和界面操作，可配合手势插件、快捷指令等使用。命令：arxs toggle（开/关录音）、arxs ui（开/关界面）、arxs record（开/关录音+界面）
-Author: yaowell
-Name: AudioRecorder Control
-
 Package: com.yaowell.batterymirrorlite
 Version: 1.1
 Architecture: iphoneos-arm64e
