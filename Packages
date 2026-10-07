@@ -309,6 +309,38 @@ Description: 震动关闭时 闹钟仍保持正常震动Keeps the native Clock a
 Author: yaowell
 Name: AlarmVibrate
 
+Package: com.yaowell.audiorecordercontrol
+Version: 0.2
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 300
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.yaowell.audiorecordercontrol_0.2_iphoneos-arm64.deb
+Size: 5382
+MD5sum: 1a6447a8c6e78fed9710ad297693fcd4
+SHA1: bc3f0fc0b5e834b2768f1a85cab8061522369bbb
+SHA256: 76f8f58163e4d286e64326dba9eb35d76b63985b03c7aeb59122e3acec466e04
+Section: Tweaks
+Description: 为 AudioRecorder XS 提供悬浮球与录音控制，可配合手势插件、快捷指令等使用。命令：arxs ui（显示/隐藏悬浮球）、arxs record（开/关录音并显示/隐藏悬浮球）、arxs toggle（仅开/关录音，不显示悬浮球）
+Author: yaowell
+Name: AudioRecorder Control
+
+Package: com.yaowell.audiorecordercontrol
+Version: 0.2
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 300
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Filename: ./debs/com.yaowell.audiorecordercontrol_0.2_iphoneos-arm64e.deb
+Size: 5310
+MD5sum: 7d1715cdcf7f25b964f6d62892ab7110
+SHA1: c1bbd0a5d5fafa546d26972d00069d352d33ea0b
+SHA256: 0755df37ad00fb7b16921d5550f348482fc666b8faf78a9ba1b8db7cb3b29ffb
+Section: Tweaks
+Description: 为 AudioRecorder XS 提供悬浮球与录音控制，可配合手势插件、快捷指令等使用。命令：arxs ui（显示/隐藏悬浮球）、arxs record（开/关录音并显示/隐藏悬浮球）、arxs toggle（仅开/关录音，不显示悬浮球）
+Author: yaowell
+Name: AudioRecorder Control
+
 Package: com.yaowell.batterymirrorlite
 Version: 1.1
 Architecture: iphoneos-arm64e
