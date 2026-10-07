@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#e9eaf8">
+    <meta name="theme-color" content="#101319">
     <title>b4by · 个人源</title>
 
     <style>
         :root {
-            --text: #202124;
-            --subtext: #8a8d96;
-            --card: rgba(255, 255, 255, 0.70);
-            --line: rgba(255, 255, 255, 0.65);
-            --input: rgba(250, 251, 253, 0.72);
-            --accent: #82b4c5;
+            --text: #f2f3f5;
+            --subtext: #9da3ad;
+            --card: rgba(25, 28, 35, 0.68);
+            --line: rgba(255, 255, 255, 0.10);
+            --input: rgba(10, 13, 18, 0.42);
+            --accent: #719eae;
         }
 
         * {
@@ -34,12 +34,23 @@
             justify-content: center;
             align-items: flex-start;
             color: var(--text);
-            background: linear-gradient(
-                135deg,
-                #eeeafb 0%,
-                #e2e7fa 45%,
-                #cfe3f8 100%
-            );
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(92, 82, 150, 0.22),
+                    transparent 38%
+                ),
+                radial-gradient(
+                    circle at 90% 85%,
+                    rgba(65, 110, 155, 0.22),
+                    transparent 40%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0d1016 0%,
+                    #151923 48%,
+                    #101722 100%
+                );
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -69,9 +80,11 @@
             border: 1px solid var(--line);
             border-radius: 28px;
             background: var(--card);
-            box-shadow: 0 20px 55px rgba(75, 90, 120, 0.10);
-            backdrop-filter: blur(22px);
-            -webkit-backdrop-filter: blur(22px);
+            box-shadow:
+                0 24px 70px rgba(0, 0, 0, 0.34),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
         }
 
         .profile {
@@ -84,12 +97,15 @@
             margin: 0 auto 16px;
             border-radius: 21px;
             object-fit: cover;
-            background: #fff;
-            box-shadow: 0 8px 22px rgba(80, 90, 110, 0.10);
+            background: #111;
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.28),
+                0 0 0 1px rgba(255, 255, 255, 0.08);
         }
 
         h1 {
             margin: 0;
+            color: #f5f6f8;
             font-size: 30px;
             line-height: 1.1;
             font-weight: 700;
@@ -106,7 +122,7 @@
         .label {
             display: block;
             margin: 0 0 8px;
-            color: #858993;
+            color: #858c98;
             font-size: 12px;
             font-weight: 500;
         }
@@ -121,25 +137,32 @@
             flex: 1;
             height: 46px;
             padding: 0 13px;
-            border: 1px solid rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 13px;
             outline: none;
-            color: #60646c;
+            color: #aeb4bd;
             background: var(--input);
             font-size: 13px;
+            box-shadow:
+                inset 0 1px 2px rgba(0, 0, 0, 0.20);
         }
 
         .copy-button {
             height: 46px;
             padding: 0 17px;
-            border: 0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 13px;
-            color: #fff;
-            background: var(--accent);
+            color: #f4f6f8;
+            background: rgba(113, 158, 174, 0.72);
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                0 5px 15px rgba(0, 0, 0, 0.15);
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
         }
 
         .copy-button:active {
@@ -162,13 +185,16 @@
             gap: 7px;
             min-height: 88px;
             padding: 9px 3px;
-            border: 1px solid transparent;
+            border: 1px solid rgba(255, 255, 255, 0.045);
             border-radius: 15px;
-            color: #747a83;
-            background: rgba(255, 255, 255, 0.24);
+            color: #9299a4;
+            background: rgba(255, 255, 255, 0.035);
             font-size: 11px;
             font-weight: 500;
-            transition: background 0.2s ease, transform 0.2s ease;
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease,
+                border-color 0.2s ease;
         }
 
         .installer:active {
@@ -177,7 +203,8 @@
 
         .installer:hover,
         .installer:focus-visible {
-            background: rgba(255, 255, 255, 0.45);
+            border-color: rgba(255, 255, 255, 0.09);
+            background: rgba(255, 255, 255, 0.07);
         }
 
         .installer img {
@@ -185,20 +212,21 @@
             height: 35px;
             object-fit: contain;
             border-radius: 9px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
         }
 
         .contact {
             margin-top: 22px;
             padding-top: 19px;
-            border-top: 1px solid rgba(0, 0, 0, 0.055);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
             text-align: center;
-            color: var(--subtext);
+            color: #858c97;
             font-size: 12px;
             line-height: 1.65;
         }
 
         .contact-number {
-            color: var(--text);
+            color: #e3e6ea;
             font-size: 14px;
             font-weight: 600;
         }
@@ -208,16 +236,20 @@
             left: 50%;
             bottom: 30px;
             padding: 9px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 99px;
             color: #fff;
-            background: rgba(35, 35, 38, 0.78);
+            background: rgba(30, 33, 39, 0.86);
             font-size: 12px;
             opacity: 0;
             pointer-events: none;
             transform: translate(-50%, 10px);
-            transition: opacity 0.2s ease, transform 0.2s ease;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
         .toast.show {
@@ -262,7 +294,7 @@
 
                 <h1>b4by</h1>
 
-                <p class="bio">不允许 你被别人发现:)</p>
+                <p class="bio">不允许 你被别人发现</p>
 
             </div>
 
