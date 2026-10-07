@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>添加软件源</title>
+
     <style>
         :root {
             --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -109,6 +110,10 @@
             background: linear-gradient(135deg, #007aff, #0051a8);
         }
 
+        .btn-irisin {
+            background: linear-gradient(135deg, #af52de, #7d3bb3);
+        }
+
         .btn-zebra {
             background: linear-gradient(135deg, #34c759, #248a3d);
         }
@@ -130,8 +135,13 @@
             color: var(--subtext-color);
         }
 
-        .contact strong {
-            display: block;
+        .contact .title {
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .contact .number {
             color: var(--text-color);
             font-weight: 600;
             font-size: 14px;
@@ -159,19 +169,29 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
+
         <div class="avatar">
             <img src="./CydiaIcon.png" alt="源图标">
         </div>
 
         <h1>添加软件源</h1>
-        <p class="subtitle" id="repo-url">https://yaowell.github.io/b4by/</p>
+
+        <p class="subtitle" id="repo-url">
+            https://yaowell.github.io/b4by/
+        </p>
 
         <div class="btn-group">
+
             <a href="sileo://source/https://yaowell.github.io/b4by/" class="btn btn-sileo">
                 添加软件源到 Sileo
+            </a>
+
+            <a href="apt-repo://https://yaowell.github.io/b4by/" class="btn btn-irisin">
+                添加软件源到 Irisin
             </a>
 
             <a href="zbra://sources/add/https://yaowell.github.io/b4by/" class="btn btn-zebra">
@@ -185,23 +205,28 @@
             <button class="btn btn-copy" onclick="copyRepo()">
                 📋 复制源地址
             </button>
+
         </div>
 
         <p class="contact">
-            如有任何问题或功能性建议，欢迎联系作者<br>
-            微信<strong>EDM1029</strong>
+            <span class="title">个人源 · 有问题联系</span><br>
+            QQ / WeChat<br>
+            <span class="number">280442219</span>
         </p>
+
     </div>
 
-    <div class="toast" id="toast">源地址已复制到剪贴板</div>
+    <div class="toast" id="toast">
+        源地址已复制到剪贴板
+    </div>
 
     <script>
         function copyRepo() {
-            const url = document.getElementById('repo-url').innerText;
+            const url = document.getElementById('repo-url').innerText.trim();
 
             navigator.clipboard.writeText(url).then(() => {
                 showToast();
-            }).catch(err => {
+            }).catch(() => {
                 const input = document.createElement('input');
                 input.value = url;
                 document.body.appendChild(input);
@@ -214,6 +239,7 @@
 
         function showToast() {
             const toast = document.getElementById('toast');
+
             toast.classList.add('show');
 
             setTimeout(() => {
