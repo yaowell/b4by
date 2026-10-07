@@ -1,10 +1,6 @@
 name: Build and Deploy Repo Packages
 
 on:
-  push:
-    branches:
-      - main
-      - master
   workflow_dispatch:
 
 jobs:
@@ -24,11 +20,22 @@ jobs:
       - name: Install dpkg
         run: |
           sudo apt-get update
-          sudo apt-get install -y dpkg-dev
+          sudo apt-get install -y dpkg-dev zstd
 
       - name: Generate Packages
         run: |
+          if [ ! -d "debs" ]; then
+            echo "debs directory not found"
+            exit 1
+          fi
+
+          echo "Deb files:"
+          find debs -type f -name "*.deb" -print
+
           dpkg-scanpackages -m ./debs /dev/null > Packages
+
+          echo "AudioRecorder Control check:"
+          grep -A10 -B2 "Package: com.yaowell.audiorecordercontrol" Packages || true
 
           bzip2 -f -k Packages
           xz -f -k Packages
