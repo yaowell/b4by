@@ -277,6 +277,23 @@ Depiction: https://repo.lenglengyu.top/packageInfo/vmoonpro.html
 Name: Vmoon Pro
 Sileodepiction: https://repo.lenglengyu.top/packageInfo/vmoonprosileo
 
+Package: com.saihgupr.remotecompanioncn
+Version: 6.0.0-cn1
+Architecture: iphoneos-arm64e
+Maintainer: 777qwq
+Installed-Size: 592
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate
+Filename: ./debs/com.saihgupr.remotecompanioncn_6.0.0-cn1_iphoneos-arm64e.deb
+Size: 95246
+MD5sum: 0c3725b3060a29874fc3bdb5caad6ab0
+SHA1: e82f34410e1d2af3796b84468a86ce6c59d41f18
+SHA256: c6c7fcb6acd3c2febdefe777598e902e85b3e618e2ba68dc2aa28e162eed1b82
+Section: Localization
+Description: Chinese localization patch for RemoteCompanion. Injects translated UI strings at runtime. Does not modify original files.
+Author: 777qwq
+Name: RemoteCompanion CN (Externalized)
+
 Package: com.yaowell.alarmvibrate
 Version: 1.0
 Architecture: iphoneos-arm64e
