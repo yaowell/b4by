@@ -1,6 +1,11 @@
 name: Build and Deploy Repo Packages
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'debs/**'
   workflow_dispatch:
 
 jobs:
