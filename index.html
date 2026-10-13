@@ -2,20 +2,22 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#090c12">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- 对应纯粹灰黑主题色，状态栏完美融合 -->
+    <meta name="theme-color" content="#121212">
     <title>b4by · yaowell</title>
 
     <style>
         :root {
-            --bg: #090c12;
-            --surface: rgba(18, 24, 33, 0.65);
-            --surface-hover: rgba(26, 34, 46, 0.85);
-            --border: rgba(255, 255, 255, 0.07);
-            --border-glow: rgba(88, 166, 255, 0.25);
-            --text-main: #f0f6fc;
-            --text-sub: #7d8590;
-            --accent: #58a6ff;
+            /* 纯正冷灰黑背景（不发蓝），高级且沉稳 */
+            --bg: #121212;
+            --surface: rgba(30, 30, 32, 0.75);
+            --surface-hover: rgba(40, 40, 44, 0.9);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(255, 255, 255, 0.2);
+            --text-main: #f5f5f7;
+            --text-sub: #86868b;
+            --accent: #0a84ff;
         }
 
         * {
@@ -34,10 +36,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(56, 139, 253, 0.08), transparent 50%),
-                linear-gradient(180deg, #090c12 0%, #040609 100%);
+            padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+            background-color: var(--bg);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", sans-serif;
         }
@@ -57,7 +57,7 @@
             padding: 14px 16px;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             transition: border-color 0.2s ease;
         }
 
@@ -78,8 +78,8 @@
             height: 52px;
             border-radius: 14px;
             object-fit: cover;
-            background: #111;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: #1c1c1e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .profile-info {
@@ -100,9 +100,9 @@
         .status-dot {
             width: 7px;
             height: 7px;
-            background: #3fb950;
+            background: #30d158;
             border-radius: 50%;
-            box-shadow: 0 0 8px #3fb950;
+            box-shadow: 0 0 8px rgba(48, 209, 88, 0.6);
         }
 
         .bio {
@@ -131,8 +131,8 @@
         .repo-row {
             display: flex;
             gap: 8px;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 12px;
             padding: 3px 3px 3px 10px;
         }
@@ -142,7 +142,7 @@
             background: transparent;
             border: none;
             outline: none;
-            color: #c9d1d9;
+            color: #e5e5ea;
             font-size: 11.5px;
             font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
             min-width: 0;
@@ -150,7 +150,7 @@
 
         .copy-btn {
             background: var(--accent);
-            color: #090c12;
+            color: #fff;
             border: none;
             border-radius: 9px;
             padding: 7px 14px;
@@ -165,7 +165,7 @@
             opacity: 0.85;
         }
 
-        /* 3. 快速安装：改回 2x2 宫格排布，图标完美方正、无多余文字 */
+        /* 3. 快速安装：2x2 宫格 */
         .install-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -178,7 +178,7 @@
             align-items: center;
             gap: 12px;
             padding: 10px 14px;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.25);
             border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 14px;
             text-decoration: none;
@@ -193,8 +193,8 @@
         }
 
         .installer-card:hover {
-            background: rgba(88, 166, 255, 0.08);
-            border-color: rgba(88, 166, 255, 0.25);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
         }
 
         .installer-card img {
@@ -202,7 +202,7 @@
             height: 32px;
             border-radius: 8px;
             object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
 
         /* 4. 底部联系方式 */
@@ -216,7 +216,7 @@
         }
 
         .footer-value {
-            color: #f0f6fc;
+            color: #f5f5f7;
             font-weight: 600;
             font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
             letter-spacing: 0.5px;
@@ -228,7 +228,7 @@
             left: 50%;
             bottom: 20px;
             transform: translate(-50%, 20px);
-            background: rgba(22, 27, 34, 0.95);
+            background: rgba(40, 40, 44, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.12);
             color: #fff;
             padding: 7px 16px;
@@ -273,7 +273,7 @@
             </div>
         </div>
 
-        <!-- 3. 快速安装：2x2 宫格，左图标右文字，精致且干练 -->
+        <!-- 3. 快速安装：2x2 宫格 -->
         <div class="box install-grid">
             <a class="installer-card" href="sileo://source/https://yaowell.github.io/b4by/">
                 <img src="icon/sileo.png" alt="Sileo">
