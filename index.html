@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- 将主题色精准对齐顶部渐变的第一眼颜色，消除状态栏割裂 -->
-    <meta name="theme-color" content="#f0f4f9">
+    <!-- 与暗黑背景首尾色精准对齐，状态栏完美融合 -->
+    <meta name="theme-color" content="#0d1117">
     <title>b4by · yaowell</title>
 
     <style>
         :root {
-            /* 采用更柔和、无缝衔接的整体浅色微光渐变 */
-            --bg-gradient: linear-gradient(180deg, #f0f4f9 0%, #dbe5f0 100%);
-            --card-bg: rgba(255, 255, 255, 0.85);
-            --card-border: rgba(255, 255, 255, 0.95);
-            --text-main: #1e293b;
-            --text-sub: #64748b;
-            --accent: #0ea5e9;
-            --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+            --bg-gradient: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+            --card-bg: rgba(22, 27, 34, 0.75);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f0f6fc;
+            --text-sub: #8b949e;
+            --accent: #58a6ff;
+            --accent-gradient: linear-gradient(135deg, #388bfd 0%, #1f6feb 100%);
         }
 
         * {
@@ -28,15 +27,14 @@
 
         html, body {
             min-height: 100vh;
-            /* 保证背景绝对铺满，不留任何多余缝隙 */
-            background-color: #f0f4f9;
+            background-color: #0d1117;
         }
 
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px 16px;
+            padding: 16px;
             background-image: var(--bg-gradient);
             background-attachment: fixed;
             color: var(--text-main);
@@ -48,7 +46,7 @@
             width: min(100%, 380px);
         }
 
-        /* 统一大卡片：结构精致、一屏全显 */
+        /* 暗黑毛玻璃大卡片 */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -57,8 +55,8 @@
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             box-shadow: 
-                0 20px 40px rgba(148, 163, 184, 0.12),
-                inset 0 1px 0 rgba(255, 255, 255, 1);
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         /* 头部居中 */
@@ -72,16 +70,16 @@
             height: 68px;
             border-radius: 20px;
             object-fit: cover;
-            background: #fff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            background: #111;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             margin-bottom: 10px;
         }
 
         h1 {
             font-size: 22px;
             font-weight: 700;
-            color: #0f172a;
+            color: #ffffff;
             line-height: 1.2;
             letter-spacing: -0.5px;
         }
@@ -105,7 +103,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.2px;
-            color: #94a3b8;
+            color: var(--text-sub);
             margin-bottom: 6px;
         }
 
@@ -113,11 +111,11 @@
         .repo-row {
             display: flex;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.65);
-            border: 1px solid rgba(203, 213, 225, 0.7);
+            background: rgba(13, 17, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 14px;
             padding: 4px;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .repo-input {
@@ -125,7 +123,7 @@
             background: transparent;
             border: none;
             outline: none;
-            color: #334155;
+            color: #c9d1d9;
             font-size: 12px;
             padding-left: 10px;
             font-weight: 500;
@@ -141,7 +139,7 @@
             font-size: 12px;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+            box-shadow: 0 4px 12px rgba(31, 111, 235, 0.3);
             transition: transform 0.2s, filter 0.2s;
         }
 
@@ -164,9 +162,9 @@
             justify-content: center;
             gap: 6px;
             padding: 10px 4px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 14px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.03);
             color: var(--text-sub);
             font-size: 11px;
             font-weight: 500;
@@ -179,10 +177,10 @@
         }
 
         .installer:hover {
-            background: rgba(255, 255, 255, 0.9);
-            border-color: rgba(14, 165, 233, 0.3);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(88, 166, 255, 0.3);
             color: var(--text-main);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .installer img {
@@ -190,14 +188,14 @@
             height: 30px;
             object-fit: contain;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         /* 底部联系方式 */
         .contact {
             margin-top: 14px;
             padding-top: 12px;
-            border-top: 1px solid rgba(226, 232, 240, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             text-align: center;
             color: var(--text-sub);
             font-size: 11px;
@@ -206,7 +204,7 @@
         .contact-number {
             display: block;
             margin-top: 2px;
-            color: #0f172a;
+            color: #f0f6fc;
             font-size: 13px;
             font-weight: 700;
             letter-spacing: 0.5px;
@@ -218,7 +216,8 @@
             left: 50%;
             bottom: 24px;
             transform: translate(-50%, 20px);
-            background: rgba(15, 23, 42, 0.85);
+            background: rgba(22, 27, 34, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #fff;
             padding: 8px 16px;
             border-radius: 99px;
@@ -228,7 +227,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(12px);
             z-index: 100;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         .toast.show {
