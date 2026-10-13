@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <!-- 主题色设为纯黑，状态栏完美融合 -->
     <meta name="theme-color" content="#000000">
     <title>b4by · yaowell</title>
 
     <style>
         :root {
-            /* 纯黑背景 */
             --bg: #000000;
-            /* 浅灰色质感卡片 */
             --surface: rgba(255, 255, 255, 0.08);
             --surface-hover: rgba(255, 255, 255, 0.12);
             --border: rgba(255, 255, 255, 0.12);
@@ -167,7 +164,7 @@
             opacity: 0.85;
         }
 
-        /* 3. 快速安装：2x2 宫格 */
+        /* 3. 快速安装：2x2 宫格（图标与文字改为居中排布） */
         .install-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -177,9 +174,11 @@
 
         .installer-card {
             display: flex;
+            flex-direction: row; /* 改为横向但居中对齐，或者你可以上下排布。这里保持图标和文字紧凑居中 */
             align-items: center;
-            gap: 12px;
-            padding: 10px 14px;
+            justify-content: center; /* 核心：让内部元素在卡片正中间 */
+            gap: 8px;
+            padding: 12px 10px;
             background: rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 14px;
@@ -200,9 +199,9 @@
         }
 
         .installer-card img {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
@@ -275,7 +274,7 @@
             </div>
         </div>
 
-        <!-- 3. 快速安装：2x2 宫格 -->
+        <!-- 3. 快速安装：2x2 宫格（居中对齐） -->
         <div class="box install-grid">
             <a class="installer-card" href="sileo://source/https://yaowell.github.io/b4by/">
                 <img src="icon/sileo.png" alt="Sileo">
