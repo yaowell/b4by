@@ -33,7 +33,6 @@
             justify-content: center;
             align-items: center;
             padding: 24px 20px;
-            /* 告别黑不溜秋，换成极其通透、带有流动感的极光/晨曦渐变背景 */
             background: var(--bg-gradient);
             background-attachment: fixed;
             color: var(--text-main);
@@ -42,7 +41,7 @@
             overflow-x: hidden;
         }
 
-        /* 背景增加柔和流动的彩色光斑，氛围感拉满 */
+        /* 柔和流动的彩色光斑背景 */
         body::before, body::after {
             content: '';
             position: fixed;
@@ -78,23 +77,24 @@
             max-width: 380px;
         }
 
-        /* 杂志风左对齐头部 */
+        /* 头部：全部居中 */
         .profile-header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 16px;
+            text-align: center;
             margin-bottom: 24px;
-            padding: 0 4px;
         }
 
         .avatar {
-            width: 64px;
-            height: 64px;
-            border-radius: 18px;
+            width: 76px;
+            height: 76px;
+            border-radius: 22px;
             object-fit: cover;
             background: #fff;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            margin-bottom: 14px;
         }
 
         .profile-info h1 {
@@ -112,7 +112,7 @@
             font-weight: 500;
         }
 
-        /* 独立精致面板：采用高透白玻璃材质 */
+        /* 独立精致白玻璃面板 */
         .panel {
             background: var(--card);
             border: 1px solid var(--border);
@@ -124,11 +124,13 @@
             margin-bottom: 14px;
         }
 
+        /* 区块标题也居中显示 */
         .panel-title {
+            text-align: center;
             font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--text-sub);
             margin-bottom: 12px;
         }
@@ -197,7 +199,7 @@
         .install-item:hover {
             background: rgba(255, 255, 255, 0.9);
             border-color: rgba(14, 165, 233, 0.3);
-            transform: translateX(2px);
+            transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
         }
 
@@ -229,20 +231,32 @@
             font-weight: 500;
         }
 
-        /* 底部信息 */
-        .footer-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 4px 12px;
-            font-size: 12px;
-            color: var(--text-sub);
+        /* 底部信息：居中面板展示 */
+        .footer-panel {
+            text-align: center;
+            padding: 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
         }
 
-        .footer-info span:last-child {
-            color: #334155;
+        .footer-title {
+            font-size: 11px;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-sub);
+            margin-bottom: 6px;
+        }
+
+        .footer-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: 1px;
         }
 
         /* Toast 提示 */
@@ -275,7 +289,7 @@
 
     <div class="wrapper">
 
-        <!-- 杂志风左对齐头部 -->
+        <!-- 头部（头像、标题、签名居中） -->
         <header class="profile-header">
             <img class="avatar" src="./CydiaIcon.png" alt="b4by">
             <div class="profile-info">
@@ -328,10 +342,10 @@
             </div>
         </div>
 
-        <!-- 底部信息 -->
-        <div class="footer-info">
-            <span>QQ / WeChat</span>
-            <span>280442219</span>
+        <!-- 底部联系方式（面板化并完美居中） -->
+        <div class="footer-panel">
+            <div class="footer-title">QQ / WeChat</div>
+            <div class="footer-number">280442219</div>
         </div>
 
     </div>
