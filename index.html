@@ -46,7 +46,7 @@
             width: min(100%, 380px);
             display: flex;
             flex-direction: column;
-            gap: 10px; /* 紧凑的模块间距 */
+            gap: 10px;
         }
 
         /* 模块化卡片通用样式 */
@@ -65,7 +65,7 @@
             border-color: var(--border-glow);
         }
 
-        /* 1. 顶部身份模块：横向紧凑设计（彻底摆脱传统大头像居中） */
+        /* 1. 顶部身份模块 */
         .profile-box {
             display: flex;
             align-items: center;
@@ -97,7 +97,6 @@
             gap: 6px;
         }
 
-        /* 加一个小圆点在线指示器，极客范拉满 */
         .status-dot {
             width: 7px;
             height: 7px;
@@ -166,23 +165,26 @@
             opacity: 0.85;
         }
 
-        /* 3. 快速安装模块（2x2 现代卡片网格，带有小图标和文字描述） */
+        /* 3. 快速安装：改回 2x2 宫格排布，图标完美方正、无多余文字 */
         .install-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 8px;
+            padding: 12px;
         }
 
         .installer-card {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 12px;
-            background: rgba(0, 0, 0, 0.25);
+            gap: 12px;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 14px;
             text-decoration: none;
-            color: #fff;
+            color: var(--text-main);
+            font-size: 13px;
+            font-weight: 600;
             transition: all 0.2s;
         }
 
@@ -196,29 +198,14 @@
         }
 
         .installer-card img {
-            width: 28px;
-            height: 28px;
-            border-radius: 7px;
-            object-fit: contain;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .installer-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .installer-name {
-            font-size: 12px;
-            font-weight: 600;
-            color: #f0f6fc;
-        }
-
-        .installer-desc {
-            font-size: 10px;
-            color: var(--text-sub);
-        }
-
-        /* 4. 底部联系方式（横向极简胶囊） */
+        /* 4. 底部联系方式 */
         .footer-box {
             display: flex;
             justify-content: space-between;
@@ -266,7 +253,7 @@
 
     <div class="container">
 
-        <!-- 1. 顶部身份：横向紧凑胶囊，带在线指示灯 -->
+        <!-- 1. 顶部身份 -->
         <div class="box profile-box">
             <img class="avatar" src="./CydiaIcon.png" alt="b4by">
             <div class="profile-info">
@@ -286,39 +273,27 @@
             </div>
         </div>
 
-        <!-- 3. 快速安装：2x2 现代卡片网格，告别平铺与单一大卡 -->
-        <div class="install-grid">
+        <!-- 3. 快速安装：2x2 宫格，左图标右文字，精致且干练 -->
+        <div class="box install-grid">
             <a class="installer-card" href="sileo://source/https://yaowell.github.io/b4by/">
                 <img src="icon/sileo.png" alt="Sileo">
-                <div class="installer-info">
-                    <span class="installer-name">Sileo</span>
-                    <span class="installer-desc">推荐源</span>
-                </div>
+                <span>Sileo</span>
             </a>
             <a class="installer-card" href="irisin://repository/add?url=https%3A%2F%2Fyaowell.github.io%2Fb4by%2F">
                 <img src="icon/irisin.png" alt="Irisin">
-                <div class="installer-info">
-                    <span class="installer-name">Irisin</span>
-                    <span class="installer-desc">快速添加</span>
-                </div>
+                <span>Irisin</span>
             </a>
             <a class="installer-card" href="zbra://sources/add/https://yaowell.github.io/b4by/">
                 <img src="icon/zebra.png" alt="Zebra">
-                <div class="installer-info">
-                    <span class="installer-name">Zebra</span>
-                    <span class="installer-desc">包管理器</span>
-                </div>
+                <span>Zebra</span>
             </a>
             <a class="installer-card" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yaowell.github.io/b4by/">
                 <img src="icon/cydia.png" alt="Cydia">
-                <div class="installer-info">
-                    <span class="installer-name">Cydia</span>
-                    <span class="installer-desc">经典源</span>
-                </div>
+                <span>Cydia</span>
             </a>
         </div>
 
-        <!-- 4. 底部联系方式：独立横向小胶囊 -->
+        <!-- 4. 底部联系方式 -->
         <div class="box footer-box">
             <span>QQ / WeChat</span>
             <span class="footer-value">280442219</span>
