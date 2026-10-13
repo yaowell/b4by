@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#101319">
+    <meta name="theme-color" content="#090a0f">
     <title>b4by · yaowell</title>
 
     <style>
         :root {
-            --text: #f2f3f5;
-            --subtext: #8a919e;
-            --card-bg: rgba(20, 23, 30, 0.75);
-            --line: rgba(255, 255, 255, 0.08);
-            --input-bg: rgba(10, 13, 18, 0.55);
+            --bg: #090a0f;
+            --card: rgba(18, 21, 28, 0.7);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #f4f5f7;
+            --text-sub: #8c93a0;
             --accent: #719eae;
         }
 
@@ -31,229 +31,201 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 24px 16px;
-            color: var(--text);
-            background:
-                radial-gradient(circle at 20% 15%, rgba(92, 82, 150, 0.25), transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(65, 110, 155, 0.25), transparent 45%),
-                linear-gradient(135deg, #0b0e14 0%, #131722 50%, #0d121b 100%);
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
-            overflow-x: hidden;
+            padding: 24px 20px;
+            background-color: var(--bg);
+            /* 更有纵深感的微光背景 */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(113, 158, 174, 0.12), transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(92, 82, 150, 0.12), transparent 40%),
+                linear-gradient(135deg, #090a0f 0%, #12151d 100%);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", sans-serif;
         }
 
-        /* 背景微光呼吸动画 */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background: radial-gradient(circle at 50% 50%, rgba(113, 158, 174, 0.08), transparent 60%);
-            pointer-events: none;
+        .wrapper {
+            width: 100%;
+            max-width: 380px;
         }
 
-        .page {
-            width: min(100%, 390px);
-        }
-
-        /* 核心卡片排版 */
-        .card {
-            position: relative;
-            padding: 32px 24px 24px;
-            border: 1px solid var(--line);
-            border-radius: 32px;
-            background: var(--card-bg);
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-        }
-
-        /* 个人信息区：居中对齐、完美间距 */
-        .profile {
-            text-align: center;
+        /* 杂志风顶栏：左侧头像，右侧名字与签名（彻底告别居中） */
+        .profile-header {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 16px;
             margin-bottom: 24px;
-        }
-
-        .avatar-wrap {
-            position: relative;
-            margin-bottom: 16px;
-        }
-
-        .avatar {
-            width: 82px;
-            height: 82px;
-            border-radius: 24px;
-            object-fit: cover;
-            background: #111;
-            box-shadow: 
-                0 12px 30px rgba(0, 0, 0, 0.35),
-                0 0 0 1.5px rgba(255, 255, 255, 0.12);
-        }
-
-        h1 {
-            color: #ffffff;
-            font-size: 28px;
-            line-height: 1.2;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .bio {
-            margin-top: 6px;
-            color: var(--subtext);
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        /* 输入与操作区排版 */
-        .section-group {
-            margin-bottom: 20px;
-        }
-
-        .label {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            color: #858c98;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
             padding: 0 4px;
         }
 
-        .repo-row {
+        .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            object-fit: cover;
+            background: #111;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-info h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .profile-info p {
+            margin-top: 4px;
+            font-size: 13px;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+
+        /* 独立质感面板 */
+        .panel {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 20px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin-bottom: 14px;
+        }
+
+        .panel-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+        }
+
+        /* 复制行排版 */
+        .repo-box {
             display: flex;
-            gap: 8px;
+            align-items: center;
+            background: rgba(10, 12, 16, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 4px 4px 4px 14px;
         }
 
         .repo-input {
-            min-width: 0;
             flex: 1;
-            height: 48px;
-            padding: 0 14px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
+            background: transparent;
+            border: none;
             outline: none;
-            color: #c5cbd3;
-            background: var(--input-bg);
+            color: #d1d5db;
             font-size: 13px;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+            font-family: inherit;
+            min-width: 0;
         }
 
-        .copy-button {
-            height: 48px;
-            padding: 0 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 14px;
+        .copy-btn {
+            background: var(--accent);
             color: #fff;
-            background: linear-gradient(135deg, #719eae 0%, #527584 100%);
-            cursor: pointer;
-            font-size: 13px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 16px;
+            font-size: 12px;
             font-weight: 600;
-            box-shadow: 
-                inset 0 1px 0 rgba(255, 255, 255, 0.2),
-                0 4px 12px rgba(113, 158, 174, 0.3);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+            box-shadow: 0 4px 12px rgba(113, 158, 174, 0.3);
         }
 
-        .copy-button:active {
-            transform: scale(0.96);
+        .copy-btn:active {
+            transform: scale(0.95);
             filter: brightness(0.9);
         }
 
-        /* 安装程序网格排版 (2x2 或 4列自适应) */
-        .installers {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .installer {
+        /* 快捷安装：改为现代横向胶囊/卡片流，打破网格呆板感 */
+        .install-list {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             gap: 8px;
-            padding: 12px 4px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 18px;
-            color: #9299a4;
-            background: rgba(255, 255, 255, 0.03);
-            font-size: 11px;
-            font-weight: 500;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .installer:active {
-            transform: scale(0.94);
-        }
-
-        .installer:hover {
-            border-color: rgba(113, 158, 174, 0.3);
-            background: rgba(113, 158, 174, 0.08);
-            color: #fff;
-        }
-
-        .installer img {
-            width: 38px;
-            height: 38px;
-            object-fit: contain;
-            border-radius: 10px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-        }
-
-        /* 底部联系方式排版优化：微模块化 */
-        .contact {
+        .install-item {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 14px;
+            justify-content: space-between;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.04);
-            border-radius: 16px;
-            background: rgba(0, 0, 0, 0.2);
-            text-align: center;
-            color: #858c97;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+
+        .install-item:hover {
+            background: rgba(113, 158, 174, 0.08);
+            border-color: rgba(113, 158, 174, 0.25);
+            transform: translateX(2px);
+        }
+
+        .install-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .install-left img {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .install-left span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+
+        .install-action {
             font-size: 11px;
-            line-height: 1.5;
+            color: var(--text-sub);
+            background: rgba(255, 255, 255, 0.06);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        /* 底部极简联系栏 */
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 12px;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        .footer-info span:last-child {
+            color: #e5e7eb;
+            font-weight: 600;
             letter-spacing: 0.5px;
         }
 
-        .contact-number {
-            margin-top: 2px;
-            color: #e3e6ea;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* 浮动提示 Toast 优化 */
+        /* Toast 提示 */
         .toast {
             position: fixed;
             left: 50%;
             bottom: 24px;
-            padding: 10px 18px;
+            transform: translate(-50%, 20px);
+            background: rgba(20, 23, 30, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 99px;
             color: #fff;
-            background: rgba(25, 28, 35, 0.92);
+            padding: 8px 16px;
+            border-radius: 99px;
             font-size: 12px;
-            font-weight: 500;
             opacity: 0;
             pointer-events: none;
-            transform: translate(-50%, 15px);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
             z-index: 100;
         }
 
@@ -261,87 +233,80 @@
             opacity: 1;
             transform: translate(-50%, 0);
         }
-
-        /* 适配超小屏幕手机 */
-        @media (max-width: 360px) {
-            .card {
-                padding: 24px 16px 18px;
-            }
-            .installers {
-                gap: 6px;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-    <main class="page">
-        <section class="card">
-            
-            <!-- 个人信息头 -->
-            <div class="profile">
-                <div class="avatar-wrap">
-                    <img class="avatar" src="./CydiaIcon.png" alt="b4by">
-                </div>
+    <div class="wrapper">
+
+        <!-- 杂志风左对齐头部 -->
+        <header class="profile-header">
+            <img class="avatar" src="./CydiaIcon.png" alt="b4by">
+            <div class="profile-info">
                 <h1>b4by</h1>
-                <p class="bio">Heartbreak</p>
+                <p>Heartbreak</p>
             </div>
+        </header>
 
-            <!-- 源地址复制区 -->
-            <div class="section-group">
-                <label class="label" for="repo-url">
-                    <span>Repository URL</span>
-                    <span>源地址</span>
-                </label>
-                <div class="repo-row">
-                    <input class="repo-input" id="repo-url" type="text" value="https://yaowell.github.io/b4by/" readonly>
-                    <button class="copy-button" id="copy-repo" type="button">复制</button>
-                </div>
+        <!-- 复制源地址面板 -->
+        <div class="panel">
+            <div class="panel-title">Repository Source</div>
+            <div class="repo-box">
+                <input class="repo-input" id="repo-url" type="text" value="https://yaowell.github.io/b4by/" readonly>
+                <button class="copy-btn" id="copy-repo" type="button">复制</button>
             </div>
+        </div>
 
-            <!-- 客户端唤醒图标网格 -->
-            <div class="section-group">
-                <label class="label">
-                    <span>One-Click Install</span>
-                    <span>快速添加</span>
-                </label>
-                <div class="installers" aria-label="添加到包管理器">
-                    <a class="installer" href="sileo://source/https://yaowell.github.io/b4by/">
+        <!-- 快速添加面板（横向条目，告别传统九宫格） -->
+        <div class="panel">
+            <div class="panel-title">One-Click Install</div>
+            <div class="install-list">
+                <a class="install-item" href="sileo://source/https://yaowell.github.io/b4by/">
+                    <div class="install-left">
                         <img src="icon/sileo.png" alt="Sileo">
                         <span>Sileo</span>
-                    </a>
-                    <a class="installer" href="irisin://repository/add?url=https%3A%2F%2Fyaowell.github.io%2Fb4by%2F">
+                    </div>
+                    <span class="install-action">添加</span>
+                </a>
+                <a class="install-item" href="irisin://repository/add?url=https%3A%2F%2Fyaowell.github.io%2Fb4by%2F">
+                    <div class="install-left">
                         <img src="icon/irisin.png" alt="Irisin">
                         <span>Irisin</span>
-                    </a>
-                    <a class="installer" href="zbra://sources/add/https://yaowell.github.io/b4by/">
+                    </div>
+                    <span class="install-action">添加</span>
+                </a>
+                <a class="install-item" href="zbra://sources/add/https://yaowell.github.io/b4by/">
+                    <div class="install-left">
                         <img src="icon/zebra.png" alt="Zebra">
                         <span>Zebra</span>
-                    </a>
-                    <a class="installer" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yaowell.github.io/b4by/">
+                    </div>
+                    <span class="install-action">添加</span>
+                </a>
+                <a class="install-item" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://yaowell.github.io/b4by/">
+                    <div class="install-left">
                         <img src="icon/cydia.png" alt="Cydia">
                         <span>Cydia</span>
-                    </a>
-                </div>
+                    </div>
+                    <span class="install-action">添加</span>
+                </a>
             </div>
+        </div>
 
-            <!-- 底部微模块 -->
-            <div class="contact">
-                <span>QQ / WeChat</span>
-                <span class="contact-number">280442219</span>
-            </div>
+        <!-- 底部信息 -->
+        <div class="footer-info">
+            <span>QQ / WeChat</span>
+            <span>280442219</span>
+        </div>
 
-        </section>
-    </main>
+    </div>
 
-    <div class="toast" id="toast">✓ 源地址已复制</div>
+    <div class="toast" id="toast">✓ 已复制源地址</div>
 
     <script>
         const copyButton = document.getElementById('copy-repo');
         const repoInput = document.getElementById('repo-url');
         const toast = document.getElementById('toast');
-
         let toastTimer;
 
         copyButton.addEventListener('click', async () => {
