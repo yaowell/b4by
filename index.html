@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#e4edf5">
+    <!-- 将主题色精准对齐顶部渐变的第一眼颜色，消除状态栏割裂 -->
+    <meta name="theme-color" content="#f0f4f9">
     <title>b4by · yaowell</title>
 
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #f0f4f9 0%, #dbe5f0 100%);
-            --card-bg: rgba(255, 255, 255, 0.82);
+            /* 采用更柔和、无缝衔接的整体浅色微光渐变 */
+            --bg-gradient: linear-gradient(180deg, #f0f4f9 0%, #dbe5f0 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
             --card-border: rgba(255, 255, 255, 0.95);
             --text-main: #1e293b;
             --text-sub: #64748b;
@@ -26,14 +28,17 @@
 
         html, body {
             min-height: 100vh;
+            /* 保证背景绝对铺满，不留任何多余缝隙 */
+            background-color: #f0f4f9;
         }
 
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px;
-            background: var(--bg-gradient);
+            padding: 20px 16px;
+            background-image: var(--bg-gradient);
+            background-attachment: fixed;
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", sans-serif;
             overflow-x: hidden;
@@ -43,34 +48,34 @@
             width: min(100%, 380px);
         }
 
-        /* 统一大卡片：一屏掌控，免去下滑痛苦 */
+        /* 统一大卡片：结构精致、一屏全显 */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 28px;
-            padding: 26px 20px 20px;
+            padding: 24px 20px 20px;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             box-shadow: 
-                0 20px 40px rgba(148, 163, 184, 0.15),
+                0 20px 40px rgba(148, 163, 184, 0.12),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
         }
 
         /* 头部居中 */
         .profile {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .avatar {
-            width: 70px;
-            height: 70px;
+            width: 68px;
+            height: 68px;
             border-radius: 20px;
             object-fit: cover;
             background: #fff;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.9);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         h1 {
@@ -82,7 +87,7 @@
         }
 
         .bio {
-            margin-top: 4px;
+            margin-top: 3px;
             font-size: 13px;
             color: var(--text-sub);
             font-weight: 500;
@@ -90,7 +95,7 @@
 
         /* 通用区块间距 */
         .section {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .label {
@@ -101,7 +106,7 @@
             text-transform: uppercase;
             letter-spacing: 1.2px;
             color: #94a3b8;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         /* 复制行 */
@@ -145,7 +150,7 @@
             filter: brightness(0.9);
         }
 
-        /* 4列紧凑网格：完美压缩高度，一屏全显 */
+        /* 4列紧凑网格 */
         .installers {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -181,17 +186,17 @@
         }
 
         .installer img {
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         }
 
-        /* 底部联系方式集成在卡片底部，无需下滑 */
+        /* 底部联系方式 */
         .contact {
-            margin-top: 18px;
-            padding-top: 14px;
+            margin-top: 14px;
+            padding-top: 12px;
             border-top: 1px solid rgba(226, 232, 240, 0.8);
             text-align: center;
             color: var(--text-sub);
@@ -277,7 +282,7 @@
                 </div>
             </div>
 
-            <!-- 底部联系方式（完美容纳在卡片内，一眼可见） -->
+            <!-- 底部联系方式 -->
             <div class="contact">
                 QQ / WeChat
                 <span class="contact-number">280442219</span>
