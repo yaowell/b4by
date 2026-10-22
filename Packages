@@ -438,6 +438,38 @@ Description: 关闭电池百分比时启用 iOS 27 风格电池图标。(Enables
 Author: yaowell
 Name: CellBell
 
+Package: com.yaowell.cellbell
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate
+Filename: ./debs/com.yaowell.cellbell_1.1_iphoneos-arm64.deb
+Size: 7788
+MD5sum: 41e914c7d603e017bbc535edabd278f3
+SHA1: b88fea6722607650bef6b887c0a2086cc437f2f0
+SHA256: 4f7e164a80be1aa4c0aae89049fa25baa7753dea1d4262a799f9377537aa5a8c
+Section: Tweaks
+Description: 关闭电池百分比时启用 iOS 27 风格电池图标。(Enables an iOS 27-style battery icon when battery percentage is off.)
+Author: yaowell & 半生年华
+Name: CellBell
+
+Package: com.yaowell.cellbell
+Version: 1.1
+Architecture: iphoneos-arm64e
+Maintainer: yaowell
+Installed-Size: 168
+Depends: mobilesubstrate
+Filename: ./debs/com.yaowell.cellbell_1.1_iphoneos-arm64e.deb
+Size: 7728
+MD5sum: d46144684c4f0c75f035653f7d8aea0a
+SHA1: e05ba69594aa11d9da1b414046745c48626f16ce
+SHA256: 1d241554df48f86b136c0a143ea0371380e853be153ece31c385d5100ae6fe63
+Section: Tweaks
+Description: 关闭电池百分比时启用 iOS 27 风格电池图标。(Enables an iOS 27-style battery icon when battery percentage is off.)
+Author: yaowell & 半生年华
+Name: CellBell
+
 Package: com.yaowell.cowbellx
 Version: 1.0.0
 Architecture: iphoneos-arm64e
